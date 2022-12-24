@@ -2,10 +2,11 @@ mod enums;
 mod guess;
 mod common;
 use enums::test::Message;
-use common::common::get_third;
+use common::common::hash;
 fn main() {
     enums();
-    get_third();
+    let h = hash();
+    println!("{:?}", h);
 }
 fn enums() {
     let w = Message::Write(String::from("haha, classic smoking cat"));
