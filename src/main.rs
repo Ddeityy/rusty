@@ -1,12 +1,12 @@
 mod enums;
 mod guess;
 mod common;
+mod common_tasks;
 use enums::test::Message;
 use common::common::hash;
 fn main() {
     enums();
-    let h = hash();
-    println!("{:?}", h);
+    println!("{:?}", hash());
 }
 fn enums() {
     let w = Message::Write(String::from("haha, classic smoking cat"));

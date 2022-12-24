@@ -11,17 +11,18 @@ pub mod common {
             None => println!("There is no third element."),
         }
     }
-    pub fn hash() -> i32 {
+    pub fn hash() {
         use std::collections::HashMap;
 
-        let a = HashMap::from([(1, 2)]);
-        let s = for (k, v) in &a {
-            println!("{k}: {v}")
-        };
-        let mut scores: HashMap<String, i32> = HashMap::new();
-        scores.insert(String::from("play"), 10);
-        let x = String::from("play");
-        let y = scores.get(&x).copied().unwrap_or(0);
-        y
+        let text = "hello world wonderful world";
+
+        let mut map = HashMap::new();                    // empty hashmap
+    
+        for word in text.split_whitespace() {
+            let count = map.entry(word).or_insert(0); // count is a mutable reference of <value> or 0
+            *count += 1;                                                     // to mutate twice dereference "*" count and add 1 
+        }
+    
+        println!("{:?}", map);
     }
 }
