@@ -1,7 +1,6 @@
-use std::cmp::Ordering;
-use std::io;
-
-pub fn guess() {
+fn main() {
+    use std::cmp::Ordering;
+    use std::io;
     use rand::Rng;
     println!("Guess the number!");
 
