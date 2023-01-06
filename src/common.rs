@@ -1,15 +1,13 @@
 fn main() {
-    pub fn get_third() {
+    pub fn get_third() -> i32 {
         let v = vec![1, 2, 3, 4, 5];
-
-        let third: &i32 = &v[2];
-        println!("The third element is {third}");
 
         let third: Option<&i32> = v.get(2);
         match third {
-            Some(third) => println!("The third element is {third}"),
+            Some(third) => third,
             None => println!("There is no third element."),
         }
+        third.unwrap()
     }
     pub fn hash() {
         use std::collections::HashMap;

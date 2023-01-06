@@ -29,10 +29,9 @@ fn main() {
 
     //let result = largest(&number_list);
     //let result = largest(&char_list);
-    
+
     //println!("The largest char is {}", result);
     //println!("The largest number is {}", result);
-    
 
     let p1 = Point { x: 5, y: 10.4 };
     let p2 = Point { x: "Hello", y: 'c' };

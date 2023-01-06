@@ -1,7 +1,5 @@
+mod tests;
 mod enums;
-mod guess;
-mod common;
-mod common_tasks;
 use enums::test::Message;
 fn main() {
     enums();

@@ -1,12 +1,14 @@
 fn main() {
-    pub fn notify(item: &impl Summary) {      // "&impl"
+    pub fn notify(item: &impl Summary) {
+        // "&impl"
         println!("Breaking news! {}", item.summarize());
     }
     // same as ^^, needed for multiple traits or items
     pub trait Summary {
         fn summarize_author(&self) -> String; // "Protocol"
 
-        fn summarize(&self) -> String {       // Abstract class method
+        fn summarize(&self) -> String {
+            // Abstract class method
             format!("(Read more from {}...)", self.summarize_author())
         }
     }
@@ -48,9 +50,7 @@ fn main() {
 
     let tweet = Tweet {
         username: String::from("horse_ebooks"),
-        content: String::from(
-            "of course, as you probably already know, people",
-        ),
+        content: String::from("of course, as you probably already know, people"),
         reply: false,
         retweet: false,
     };

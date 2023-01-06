@@ -1,7 +1,7 @@
-use std::fs::File;
-use std::fs::io;
-use std::io::{self, Read};
 use std::error::Error;
+use std::fs::io;
+use std::fs::File;
+use std::io::{self, Read};
 
 // () or any Error type
 fn main() -> Result<(), Box<dyn Error>> {
@@ -24,7 +24,6 @@ fn main() -> Result<(), Box<dyn Error>> {
         text.lines().next()?.chars().last()
     }
 
-
     // Error handling through type declaration
     pub struct Guess {
         value: i32,
@@ -35,10 +34,10 @@ fn main() -> Result<(), Box<dyn Error>> {
             if value < 1 || value > 100 {
                 panic!("Guess value must be between 1 and 100, got {}.", value);
             }
-    
+
             Guess { value }
         }
-    
+
         pub fn value(&self) -> i32 {
             self.value
         }
